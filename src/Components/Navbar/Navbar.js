@@ -115,46 +115,53 @@ export default function PersistentDrawerLeft() {
 					open={open}
 					// onClose={handleDrawerClose}
 				>
-					<Toolbar
-						aria-label="open drawer"
-						onClick={handleDrawerOpen}
-						edge="start"
-						sx={{
-							...(open && { ml: -30 }),
-							backgroundColor: 'gray',
+					<div
+						style={{
 							display: 'flex',
+							alignItems: 'center',
 							justifyContent: 'space-between',
 						}}
 					>
 						<img style={{ width: '100px' }} src={logo} />
+
 						<div style={{ display: 'flex', alignItems: 'center' }}>
 							<FacebookIcon className="navIcons" />
 							<TelegramIcon className="navIcons" />
 							<InstagramIcon className="navIcons" />
 							<SearchIcon className="navIcons" />
-							<IconButton
-								color="inherit"
+							<Toolbar
 								aria-label="open drawer"
 								onClick={handleDrawerOpen}
 								edge="start"
-								sx={{ ...(open && { display: '' }) }}
+								sx={{
+									...(open && {}),
+									// backgroundColor: 'gray',
+								}}
 							>
-								<MenuIcon
-									sx={{
-										fontSize: '25px',
-										color: 'white',
-										...(open && { display: 'none' }),
-									}}
-								/>
-								<CloseIcon
-									sx={{
-										display: 'none',
-										...(open && { display: '', color: 'white' }),
-									}}
-								/>
-							</IconButton>
+								<IconButton
+									color="inherit"
+									aria-label="open drawer"
+									onClick={handleDrawerOpen}
+									edge="start"
+									sx={{ ...(open && { display: '' }) }}
+								>
+									<MenuIcon
+										sx={{
+											fontSize: '25px',
+											color: 'white',
+											...(open && { display: 'none' }),
+										}}
+									/>
+									<CloseIcon
+										sx={{
+											display: 'none',
+											...(open && { display: '', color: 'white' }),
+										}}
+									/>
+								</IconButton>
+							</Toolbar>
 						</div>
-					</Toolbar>
+					</div>
 				</AppBar>
 
 				<Drawer

@@ -23,7 +23,7 @@ export default function SimpleContainer() {
 				<Box
 					sx={{
 						// bgcolor: 'transparent',
-						bgcolor: 'blue',
+						// bgcolor: 'blue',
 						height: '70px',
 					}}
 				>
