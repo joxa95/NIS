@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import Grid from '@mui/material/Grid';
+import { Link } from 'react-router-dom';
 
 export default function SignUP() {
 	return (
@@ -31,7 +32,7 @@ export default function SignUP() {
 										variant="h5"
 										fontWeight="800"
 										style={{
-											borderLeft: '5px solid yellow',
+											borderLeft: '5px solid #FFBA00',
 											padding: '0 10px',
 										}}
 									>
@@ -41,7 +42,9 @@ export default function SignUP() {
 									<br />
 									<Typography variant="subtitle">
 										Don't have an account? &nbsp;
-										<a className="newAccount">Create one here </a>
+										<Link to="/signup">
+											<a className="newAccount">Create one here </a>
+										</Link>
 									</Typography>
 									<br />
 									<br />
@@ -68,7 +71,11 @@ export default function SignUP() {
 											control={<Checkbox default />}
 											label="Remember me"
 										/>
-										<a className="forgot">Forgot Password?</a>
+										<Link to="/forgot">
+											<a href="" className="forgot">
+												Forgot Password?
+											</a>
+										</Link>
 										<br /> <br />
 										<Button type="submit" variant="contained">
 											Login

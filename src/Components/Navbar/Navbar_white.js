@@ -10,9 +10,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import '../SCSS/Navbar.scss';
+import '../SCSS/Navbar_white.scss';
 
 import { useEffect, useRef, useState } from 'react';
-import logo from '../images/logo-2.png';
+import logo from '../images/logo-nis.png';
 import Container from '@mui/material/Container';
 import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
@@ -119,10 +120,10 @@ export default function PersistentDrawerLeft() {
 			<AppBar
 				className="navbar"
 				sx={{
-					backgroundColor: 'transparent',
+					backgroundColor: 'white',
 					color: 'black',
 					boxShadow: '0',
-					borderTop: '1px solid rgba(88, 88, 88, 0.5)',
+					borderTop: '1px solid rgba(88, 88, 88, 0.1)',
 					borderBottom: '1px solid rgba(88, 88, 88, 0.5)',
 				}}
 				color="success"
@@ -141,19 +142,19 @@ export default function PersistentDrawerLeft() {
 						<img style={{ width: '140px' }} src={logo} />
 						<div style={{ display: 'flex' }}>
 							<Link className="link2" to="/">
-								<div className="nav_middle_white">Home</div>
+								<div className="nav_middle">Home</div>
 							</Link>
 							<Link className="link2" to="/courses">
-								<div className="nav_middle_white">Courses</div>
+								<div className="nav_middle">Courses</div>
 							</Link>
 							<Link className="link2" to="/event">
-								<div className="nav_middle_white">Event and News</div>
+								<div className="nav_middle">Event and News</div>
 							</Link>
 							<Link className="link2" to="/gallery">
-								<div className="nav_middle_white">Gallery</div>
+								<div className="nav_middle">Gallery</div>
 							</Link>
 							<Link className="link2" to="/about">
-								<div className="nav_middle_white">About Us</div>
+								<div className="nav_middle">About Us</div>
 							</Link>
 						</div>
 						<div
@@ -162,10 +163,10 @@ export default function PersistentDrawerLeft() {
 								alignItems: 'center',
 							}}
 						>
-							<FacebookIcon className="navIcons_white" />
-							<TelegramIcon className="navIcons_white" />
-							<InstagramIcon className="navIcons_white" />
-							<SearchIcon className="navIcons_white " />
+							<FacebookIcon className="navIcons" />
+							<TelegramIcon className="navIcons" />
+							<InstagramIcon className="navIcons" />
+							<SearchIcon className="navIcons " />
 							<Toolbar
 								className="toolbar"
 								aria-label="open drawer"
@@ -183,14 +184,14 @@ export default function PersistentDrawerLeft() {
 									<MenuIcon
 										sx={{
 											fontSize: '25px',
-											color: 'white',
+											color: 'black',
 											...(open && { display: 'none' }),
 										}}
 									/>
 									<CloseIcon
 										sx={{
 											display: 'none',
-											...(open && { display: '', color: 'white' }),
+											...(open && { display: '', color: 'black' }),
 										}}
 									/>
 								</IconButton>

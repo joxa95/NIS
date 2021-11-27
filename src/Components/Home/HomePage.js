@@ -6,11 +6,13 @@ import Section4 from './Section4';
 import Section5 from './Section5';
 import Count from './Count.js';
 import '../SCSS/HomePage.scss';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
 	return (
 		<div>
 			<Section1 />
+
 			<Section2 />
 			<div className="bg">
 				<div className="background">

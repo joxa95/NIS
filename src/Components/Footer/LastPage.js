@@ -14,7 +14,6 @@ export default function LastPage() {
 							<img src={Logo} />
 							<br />
 							<br />
-							<br />
 							<Typography>
 								Chortoq shahar <br />
 								"Istiqlol xiyoboni" ko'chasi 12-uy
