@@ -2,24 +2,16 @@ import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import CssBaseline from '@mui/material/CssBaseline';
 import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import './nav.scss';
-import HomeIcon from '@mui/icons-material/Home';
-import ListAltIcon from '@mui/icons-material/ListAlt';
-import SpeakersIcon from '@mui/icons-material/ConnectWithoutContact';
-import ContactIcon from '@mui/icons-material/PermContactCalendar';
-import LocationIcon from '@mui/icons-material/LocationOn';
-import BlogIcon from '@mui/icons-material/StickyNote2';
-import { useEffect, useRef } from 'react';
+import '../SCSS/Navbar.scss';
+
+import { useEffect, useRef, useState } from 'react';
 import logo from '../images/logo-2.png';
 import Container from '@mui/material/Container';
 import CloseIcon from '@mui/icons-material/Close';
@@ -27,8 +19,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import FacebookIcon from '@mui/icons-material/FacebookOutlined';
-
 import { Link } from 'react-router-dom';
+import Logo from '../images/logo.png';
+
 const drawerWidth = 240;
 
 const Main = styled('main', { shouldForwardProp: prop => prop !== 'open' })(
@@ -82,13 +75,13 @@ export default function PersistentDrawerLeft() {
 
 	let menuRef = useRef();
 
-	useEffect(() => {
-		document.addEventListener('mousedown', event => {
-			if (!menuRef.current.contains(event.target)) {
-				setOpen(false);
-			}
-		});
-	});
+	// useEffect(() => {
+	// 	document.addEventListener('mousedown', event => {
+	// 		if (!menuRef.current.contains(event.target)) {
+	// 			setOpen(false);
+	// 		}
+	// 	});
+	// });
 
 	const handleDrawerOpen = () => {
 		setOpen(true);
@@ -98,33 +91,60 @@ export default function PersistentDrawerLeft() {
 		setOpen(false);
 	};
 
+	//* Navbar background changing
+
+	const [navbar, setNavbar] = useState(false);
+
+	const changeBackground = () => {
+		if (window.scrollY >= 40) {
+			setNavbar(true);
+		} else {
+			setNavbar(false);
+		}
+	};
+	window.addEventListener('scroll', changeBackground);
+
 	return (
-		<Container maxWidth="lg">
-			<Box ref={menuRef} sx={{ display: 'flex' }}>
-				{/* <CssBaseline /> */}
-				<AppBar
-					sx={{
-						backgroundColor: 'transparent',
-						color: 'black',
-						boxShadow: '0',
-						borderTop: '1px solid #C4C4C4',
-						borderBottom: '1px solid #C4C4C4',
-					}}
-					color="success"
-					position="sticky"
-					open={open}
-					// onClose={handleDrawerClose}
-				>
+		<Box
+			className={navbar ? 'navbar active' : 'navbar'}
+			ref={menuRef}
+			sx={{
+				paddingTop: '5px',
+				display: 'flex',
+				height: '80px',
+				position: 'sticky',
+				top: '0',
+			}}
+		>
+			<AppBar
+				sx={{
+					backgroundColor: 'transparent',
+					color: 'black',
+					boxShadow: '0',
+					borderTop: '1px solid rgba(88, 88, 88, 0.5)',
+					borderBottom: '1px solid rgba(88, 88, 88, 0.5)',
+				}}
+				color="success"
+				position=""
+				onClose={handleDrawerClose}
+			>
+				<Container maxWidth="lg">
 					<div
 						style={{
+							position: 'sticky',
 							display: 'flex',
 							alignItems: 'center',
 							justifyContent: 'space-between',
 						}}
 					>
-						<img style={{ width: '100px' }} src={logo} />
+						<img style={{ width: '140px' }} src={logo} />
 
-						<div style={{ display: 'flex', alignItems: 'center' }}>
+						<div
+							style={{
+								display: 'flex',
+								alignItems: 'center',
+							}}
+						>
 							<FacebookIcon className="navIcons" />
 							<TelegramIcon className="navIcons" />
 							<InstagramIcon className="navIcons" />
@@ -135,7 +155,6 @@ export default function PersistentDrawerLeft() {
 								edge="start"
 								sx={{
 									...(open && {}),
-									// backgroundColor: 'gray',
 								}}
 							>
 								<IconButton
@@ -162,65 +181,66 @@ export default function PersistentDrawerLeft() {
 							</Toolbar>
 						</div>
 					</div>
-				</AppBar>
+				</Container>
+			</AppBar>
 
-				<Drawer
-					sx={{
-						position: 'absolute',
-						width: drawerWidth,
-						// flexShrink: 1,
-						'& .MuiDrawer-paper': {
-							width: drawerWidth,
-							boxSizing: 'border-box',
-							backgroundColor: '#4c4c4c',
-						},
-					}}
-					// onClose={handleDrawerClose}
-					// variant="persistent"
-					anchor="left"
-					open={open}
-				>
-					<DrawerHeader>
-						<IconButton sx={{ color: 'white' }} onClick={handleDrawerClose}>
-							{theme.direction === 'ltr' ? (
-								<ChevronLeftIcon />
-							) : (
-								<ChevronRightIcon />
-							)}
-						</IconButton>
-					</DrawerHeader>
-					<Divider />
-					<List
-						sx={{
-							display: 'flex',
-							flexDirection: 'column',
-						}}
+			<Drawer
+				sx={{
+					position: 'absolute',
+					width: drawerWidth,
+					'& .MuiDrawer-paper': {
+						width: '300px',
+						boxSizing: 'border-box',
+					},
+				}}
+				onClose={handleDrawerClose}
+				variant="temporary"
+				anchor="left"
+				open={open}
+			>
+				<DrawerHeader>
+					<img src={Logo} style={{ width: '50%' }} />
+					<IconButton
+						sx={{ color: 'black', paddingLeft: '50px' }}
+						onClick={handleDrawerClose}
 					>
-						<div className="link">
-							<HomeIcon className="icons " /> Home
-						</div>
-						<div className="link">
-							<SpeakersIcon className="icons" /> Speakers
-						</div>
-						<div className="link">
-							<ListAltIcon className="icons" /> Schedule
-						</div>
-						<div className="link">
-							<LocationIcon className="icons" /> Location
-						</div>
-						<div className="link">
-							<BlogIcon className="icons" /> Blog
-						</div>
-						<div className="link">
-							<ContactIcon className="icons" /> Contacts
-						</div>
-					</List>
-					<Divider />
-				</Drawer>
-				<Main style={{ padding: '0' }} open={open}>
-					<DrawerHeader />
-				</Main>
-			</Box>
-		</Container>
+						{theme.direction === 'ltr' ? (
+							<ChevronLeftIcon />
+						) : (
+							<ChevronRightIcon />
+						)}
+					</IconButton>
+				</DrawerHeader>
+				<List
+					sx={{
+						display: 'flex',
+						flexDirection: 'column',
+					}}
+				>
+					<Container>
+						<Link className="link2" to="/home">
+							<div className="link" style={{ borderTop: '1px dashed #e0e0e0' }}>
+								Home
+							</div>
+						</Link>
+						<Link className="link2" to="/courses">
+							<div className="link">Courses</div>
+						</Link>
+						<Link className="link2" to="/event">
+							<div className="link">Event and News</div>
+						</Link>
+						<Link className="link2" to="/gallery">
+							<div className="link">Gallery</div>
+						</Link>
+						<Link className="link2" to="/about">
+							<div className="link">About Us</div>
+						</Link>
+					</Container>
+				</List>
+			</Drawer>
+			<Main style={{ padding: '0' }} open={open}>
+				<DrawerHeader />
+			</Main>
+		</Box>
 	);
 }

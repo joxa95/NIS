@@ -1,8 +1,6 @@
 body {
 	margin: 0;
 	padding: 0;
-	// width: 100vh;
-	// height: 100%;
 }
 
 .background {
@@ -12,12 +10,12 @@ body {
 }
 
 .homepage {
-	height: 100vh;
 	width: 100%;
 	background-image: url(../images/banner/banner2.jpg);
 	background-size: cover;
-	background-position: center;
 	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
 	transition: 30s;
 
 	animation-name: animate;

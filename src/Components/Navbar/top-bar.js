@@ -1,13 +1,13 @@
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Typography from '@mui/material/Typography';
 import HelpIcon from '@mui/icons-material/Help';
 import PhoneIcon from '@mui/icons-material/Phone';
+import Grid from '@mui/material/Grid';
+import { Link } from 'react-router-dom';
 
 export default function SimpleContainer() {
 	const [age, setAge] = React.useState('');
@@ -19,20 +19,35 @@ export default function SimpleContainer() {
 	return (
 		<React.Fragment>
 			<CssBaseline />
-			<Container maxWidth="lg">
-				<Box
+			{/* <Container maxWidth="lg"> */}
+			{/* <Box> */}
+			<Grid
+				container
+				columnSpacing={26}
+				rowSpacing={0}
+				sx={{
+					display: 'flex',
+
+					p: '5px 0px 0',
+				}}
+			>
+				<Grid
+					item
+					xs={12}
+					// sm={12}
+					md={6}
 					sx={{
-						// bgcolor: 'transparent',
-						// bgcolor: 'blue',
-						height: '70px',
+						// backgroundColor: 'red',
+						display: 'flex',
+						// width: '100%',
+						justifyContent: 'center',
+						// alignItems: 'center',
 					}}
 				>
 					<div
 						style={{
 							display: 'flex',
-							justifyContent: 'center',
-							alignItems: 'center',
-							height: '50%',
+							// backgroundColor: 'blue',
 						}}
 					>
 						<Typography
@@ -40,7 +55,9 @@ export default function SimpleContainer() {
 							style={{
 								padding: '0 10px',
 								marginRight: '10px',
-								borderRight: '1px solid #B1B1B1',
+								borderRight: '1px solid rgba(88, 88, 88, 0.481)',
+								color: 'white',
+								cursor: 'pointer',
 							}}
 						>
 							<HelpIcon
@@ -57,7 +74,10 @@ export default function SimpleContainer() {
 							/>{' '}
 							Ask a Question
 						</Typography>
-						<Typography variant="subtitle2">
+						<Typography
+							variant="subtitle2"
+							sx={{ color: 'white', cursor: 'pointer' }}
+						>
 							<PhoneIcon
 								sx={{
 									position: 'relative',
@@ -71,12 +91,15 @@ export default function SimpleContainer() {
 							+998 99 322 01 13
 						</Typography>
 					</div>
+				</Grid>
+
+				{/* <Grid item xs={12} md={4}></Grid> */}
+
+				<Grid item xs={12} md={6}>
 					<div
 						style={{
 							display: 'flex',
 							justifyContent: 'center',
-							alignItems: 'center',
-							height: '50%',
 						}}
 					>
 						<FormControl>
@@ -84,9 +107,10 @@ export default function SimpleContainer() {
 								sx={{
 									textDecoration: 'none',
 									height: '20px',
-									paddingRight: '10px',
+									pt: '5px',
 									marginRight: '10px',
-									borderRight: '1px solid #B1B1B1',
+									borderRight: '1px solid rgba(88, 88, 88, 0.481)',
+									color: 'white',
 								}}
 								variant="standard"
 								value={age}
@@ -104,19 +128,37 @@ export default function SimpleContainer() {
 						</FormControl>
 						<Typography
 							variant="subtitle2"
-							style={{
-								height: '20px',
+							sx={{
+								color: 'white',
 								paddingRight: '10px',
 								marginRight: '10px',
-								borderRight: '1px solid #B1B1B1',
+								borderRight: '1px solid rgba(88, 88, 88, 0.481)',
+								cursor: 'pointer',
 							}}
 						>
-							Login
+							<Link
+								to="/login"
+								style={{ textDecoration: 'none', color: '#fff' }}
+							>
+								Login
+							</Link>
 						</Typography>
-						<Typography variant="subtitle2">Register</Typography>
+						<Typography
+							variant="subtitle2"
+							sx={{ cursor: 'pointer', color: 'white' }}
+						>
+							<Link
+								to="/signup"
+								style={{ textDecoration: 'none', color: '#fff' }}
+							>
+								Register
+							</Link>
+						</Typography>
 					</div>
-				</Box>
-			</Container>
+				</Grid>
+			</Grid>
+			{/* </Box> */}
+			{/* </Container> */}
 		</React.Fragment>
 	);
 }
