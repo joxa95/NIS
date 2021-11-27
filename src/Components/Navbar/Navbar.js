@@ -138,7 +138,23 @@ export default function PersistentDrawerLeft() {
 						}}
 					>
 						<img style={{ width: '140px' }} src={logo} />
-
+						<div style={{ display: 'flex' }}>
+							<Link className="link2" to="/home">
+								<div className="nav_middle">Home</div>
+							</Link>
+							<Link className="link2" to="/courses">
+								<div className="nav_middle">Courses</div>
+							</Link>
+							<Link className="link2" to="/event">
+								<div className="nav_middle">Event and News</div>
+							</Link>
+							<Link className="link2" to="/gallery">
+								<div className="nav_middle">Gallery</div>
+							</Link>
+							<Link className="link2" to="/about">
+								<div className="nav_middle">About Us</div>
+							</Link>
+						</div>
 						<div
 							style={{
 								display: 'flex',
@@ -148,14 +164,13 @@ export default function PersistentDrawerLeft() {
 							<FacebookIcon className="navIcons" />
 							<TelegramIcon className="navIcons" />
 							<InstagramIcon className="navIcons" />
-							<SearchIcon className="navIcons" />
+							<SearchIcon className="navIcons " />
 							<Toolbar
+								className="toolbar"
 								aria-label="open drawer"
 								onClick={handleDrawerOpen}
 								edge="start"
-								sx={{
-									...(open && {}),
-								}}
+								sx={{ ...(open && {}) }}
 							>
 								<IconButton
 									color="inherit"

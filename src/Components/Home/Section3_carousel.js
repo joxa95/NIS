@@ -11,7 +11,7 @@ function SampleNextArrow(props) {
 			className=""
 			style={{
 				position: 'absolute',
-				top: '-55px',
+				top: '-45px',
 				right: '15px',
 				width: '40px',
 				height: '40px',
@@ -36,7 +36,7 @@ function SamplePrevArrow(props) {
 			className="carusel"
 			style={{
 				position: 'absolute',
-				top: '-55px',
+				top: '-45px',
 				right: '65px',
 				width: '40px',
 				height: '40px',
@@ -93,6 +93,7 @@ export default class CustomArrows extends Component {
 		};
 		return (
 			<div {...settings}>
+				<br />
 				<br />
 				<Slider {...settings}>
 					<Card />

@@ -9,6 +9,16 @@
 	align-items: center;
 }
 
+.nav_middle {
+	margin: 0 13px;
+	font-size: 20px;
+	color: #fff;
+}
+
+.nav_middle:hover {
+	color: rgb(253, 165, 0);
+}
+
 .link2 {
 	color: #111;
 	text-decoration: none;
@@ -43,6 +53,8 @@
 }
 
 .navIcons {
+	position: relative;
+	left: 50px;
 	padding: 2px;
 	color: white;
 	margin-right: 10px;
@@ -52,4 +64,25 @@
 .navIcons:hover {
 	color: #ffa200;
 	transition: 0.5s ease;
+}
+
+.toolbar {
+	visibility: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+	.toolbar {
+		visibility: visible;
+		margin-left: 30px;
+	}
+
+	.nav_middle {
+		visibility: hidden;
+		display: none;
+	}
+
+	.navIcons {
+		position: relative;
+		left: 40px;
+	}
 }
