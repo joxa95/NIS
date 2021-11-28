@@ -110,7 +110,7 @@ export default function PersistentDrawerLeft() {
 			className={navbar ? 'navbar active' : 'navbar'}
 			ref={menuRef}
 			sx={{
-				paddingTop: '5px',
+				paddingTop: '0px',
 				display: 'flex',
 				height: '80px',
 				position: 'sticky',

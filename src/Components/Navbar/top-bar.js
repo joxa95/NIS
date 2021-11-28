@@ -56,23 +56,27 @@ export default function SimpleContainer() {
 								padding: '0 10px',
 								marginRight: '10px',
 								borderRight: '1px solid rgba(88, 88, 88, 0.481)',
-								color: 'white',
 								cursor: 'pointer',
 							}}
 						>
-							<HelpIcon
-								sx={{
-									position: 'relative',
-									top: '1px',
-									height: '15px',
-									width: '15px',
-									color: 'white',
-									backgroundColor: 'black',
-									borderRadius: '50%',
-								}}
-								className="icon"
-							/>{' '}
-							Ask a Question
+							<Link
+								style={{ color: 'white', textDecoration: 'none' }}
+								to="/questions"
+							>
+								<HelpIcon
+									sx={{
+										position: 'relative',
+										top: '1px',
+										height: '15px',
+										width: '15px',
+										color: 'white',
+										backgroundColor: 'black',
+										borderRadius: '50%',
+									}}
+									className="icon"
+								/>{' '}
+								Ask a Question
+							</Link>
 						</Typography>
 						<Typography
 							variant="subtitle2"

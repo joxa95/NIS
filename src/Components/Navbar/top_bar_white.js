@@ -24,6 +24,7 @@ export default function SimpleContainer() {
 				columnSpacing={26}
 				rowSpacing={0}
 				sx={{
+					backgroundColor: 'white',
 					display: 'flex',
 					p: '10px 0px 8px',
 				}}
@@ -52,17 +53,22 @@ export default function SimpleContainer() {
 								cursor: 'pointer',
 							}}
 						>
-							<HelpIcon
-								sx={{
-									position: 'relative',
-									top: '1px',
-									height: '15px',
-									width: '15px',
-									borderRadius: '50%',
-								}}
-								className="icon"
-							/>{' '}
-							Ask a Question
+							<Link
+								style={{ color: 'black', textDecoration: 'none' }}
+								to="/questions"
+							>
+								<HelpIcon
+									sx={{
+										position: 'relative',
+										top: '1px',
+										height: '15px',
+										width: '15px',
+										borderRadius: '50%',
+									}}
+									className="icon"
+								/>{' '}
+								Ask a Question
+							</Link>
 						</Typography>
 						<Typography
 							variant="subtitle2"
@@ -74,7 +80,7 @@ export default function SimpleContainer() {
 									top: '1px',
 									height: '15px',
 									width: '15px',
-									color: 'white',
+									color: 'black',
 									borderRadius: '50%',
 								}}
 							/>{' '}
