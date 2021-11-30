@@ -27,7 +27,6 @@ export default function SimpleContainer() {
 				rowSpacing={0}
 				sx={{
 					display: 'flex',
-
 					p: '5px 0px 0',
 				}}
 			>

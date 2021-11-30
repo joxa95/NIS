@@ -7,7 +7,7 @@ import SignUp from './Components/SignUp/SignUp';
 import Layout from './Components/Layout/Layout';
 import About from './Components/About/About';
 import Questions from './Components/Question/Questions';
-// import Courses from './Components/Courses/Courses';
+import Courses from './Components/Courses/Courses';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -21,7 +21,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<HomePage />} />
 					<Route path="/about" element={<About />} />
-					{/* <Route path="/courses" element={<Courses />} /> */}
+					<Route path="/courses" element={<Courses />} />
 					<Route path="/questions" element={<Questions />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/forgot" element={<Forgot />} />
