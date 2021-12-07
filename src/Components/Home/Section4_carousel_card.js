@@ -11,15 +11,13 @@ function Section4_carousel_card(props) {
 				width: '96%',
 				borderRadius: '8px',
 				padding: '0px 15px 20px 0px',
+				border: '1px solid rgba(182, 182, 182, 0.429)',
 			}}
 		>
 			<div
 				style={{
-					// paddingTop: '-10px',
 					padding: '20px 30px  ',
 					display: 'flex',
-					// alignItems: 'center',
-					// backgroundColor: 'red',
 				}}
 			>
 				<img

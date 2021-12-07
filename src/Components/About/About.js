@@ -20,10 +20,12 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import MailIcon from '@mui/icons-material/Mail';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
-import FacebookIcon from '@mui/icons-material/Facebook';
+import FacebookIcon from '@mui/icons-material/FacebookOutlined';
 import Nav_white from '../Navbar/Navbar_white';
 import Top_white from '../Navbar/top_bar_white';
 import Footer from '../Footer/LastPage';
+import RightIcon from '@mui/icons-material/ChevronRight';
+import Carousel from '../Home/Section4_carousel';
 
 export default function About() {
 	return (
@@ -38,12 +40,27 @@ export default function About() {
 						</Typography>
 					</div>
 				</div>
+				<div
+					style={{
+						borderBottom: '1px solid rgba(109, 108, 134, 0.168)',
+						marginBottom: '50px',
+					}}
+				>
+					<Container sx={{ p: '15px ' }}>
+						<Typography
+							// variant="body2"
+							sx={{ display: 'flex', alignItems: 'center' }}
+						>
+							Home <RightIcon sx={{ fontSize: '18px' }} /> About Us
+						</Typography>
+					</Container>
+				</div>
 				<Container>
 					<Grid container columnSpacing={4} rowSpacing={3}>
 						<Grid item xs={12} md={3}>
 							<div className="AboutCard">
-								<img src={icon1} align="center" />
-								<Typography variant="h5" align="center" fontWeight="600">
+								<img src={icon1} />
+								<Typography variant="h5" fontWeight="600">
 									Our Philosophy
 									<Typography>
 										Lorem inspum dolor sit amet,consectetuer adipisicing
@@ -55,7 +72,7 @@ export default function About() {
 						<Grid item xs={12} md={3}>
 							<div className="AboutCard">
 								<img src={icon2} />
-								<Typography variant="h5" align="center" fontWeight="600">
+								<Typography variant="h5" fontWeight="600">
 									Our Philosophy
 									<Typography>
 										Lorem inspum dolor sit amet,consectetuer adipisicing
@@ -67,7 +84,7 @@ export default function About() {
 						<Grid item xs={12} md={3}>
 							<div className="AboutCard">
 								<img src={icon3} />
-								<Typography variant="h5" align="center" fontWeight="600">
+								<Typography variant="h5" fontWeight="600">
 									Our Philosophy
 									<Typography>
 										Lorem inspum dolor sit amet,consectetuer adipisicing
@@ -79,7 +96,7 @@ export default function About() {
 						<Grid item xs={12} md={3}>
 							<div className="AboutCard">
 								<img src={icon4} />
-								<Typography variant="h5" align="center" fontWeight="600">
+								<Typography variant="h5" fontWeight="600">
 									Our Philosophy
 									<Typography>
 										Lorem inspum dolor sit amet,consectetuer adipisicing
@@ -218,7 +235,10 @@ export default function About() {
 										tempor feugiat.
 									</Typography>{' '}
 									<br />
-									<Button variant="contained">Join now </Button>
+									<br />
+									<Button sx={{ p: '15px 30px' }} variant="contained">
+										Join Now{' '}
+									</Button>
 								</Grid>
 							</Grid>
 						</Container>
@@ -227,140 +247,142 @@ export default function About() {
 				<br />
 				<Container>
 					<div className="carouselCards">
-						<Grid container rowSpacing={4} columnSpacing={4}>
-							<Grid item xs={12} md={12}>
-								<Typography
-									variant="h5"
-									fontWeight="600"
-									style={{ borderLeft: '4px solid gold', paddingLeft: '5px' }}
-								>
-									What People <span style={{ fontWeight: '200' }}>Say</span>
-								</Typography>
-								<Typography varaint="body1" align="left">
-									At tempus sem nunc at venenatis magna, et tempus lacus.
-									<br /> Donec interdum est eget tempor feugiat.
-								</Typography>
-							</Grid>
-							<Grid item xs={12} md={6}>
-								<div className="gridCard">
-									<Typography variant="h6" fontWeight="700">
-										Julia Homes
-									</Typography>
-									<br />
-									<Typography varaint="body1" fontWeight="500">
-										-Art Director
-									</Typography>
-									<Typography>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										Vestibulum sed commodo felis. Curabitur rhoncus ipsum urna,
-										ac semper metus sollicitudin at. In nisi turpis, congue quis
-										viverra sed, luctus eleifend tellus.
-									</Typography>
-								</div>
-							</Grid>
-							<Grid item xs={12} md={6}>
-								<div className="gridCard">
-									<Typography variant="h6" fontWeight="700">
-										Peter Parker
-									</Typography>
-									<Typography varaint="body1" fontWeight="500">
-										-Art Director
-									</Typography>
-									<br />
-									<Typography>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										Vestibulum sed commodo felis. Curabitur rhoncus ipsum urna,
-										ac semper metus sollicitudin at. In nisi turpis, congue quis
-										viverra sed, luctus eleifend tellus.
-									</Typography>
-								</div>
-							</Grid>
-						</Grid>
+						<Container
+							sx={{
+								pt: '70px',
+							}}
+						>
+							<Typography
+								variant="h4"
+								sx={{
+									pl: 1,
+
+									borderLeft: '5px solid #FFA200',
+								}}
+							>
+								<strong>WHAT PEOPLE </strong>
+								SAY
+							</Typography>
+							<br />
+							<Typography sx={{}}>
+								It is a long established fact that a reader will be distracted
+								by the readable content of a page{' '}
+							</Typography>
+							<Carousel />
+							<br />
+							<br />
+							<br />
+						</Container>
 					</div>
 					<br />
 					<Grid container columnSpacing={4} rowSpacing={4}>
-						<Grid item xs={12} md={6}>
+						<Grid item xs={12} md={5}>
 							<div className="contactCard">
 								<Container>
-									<Typography variant="h4" fontWeight="600">
+									<Typography
+										className="colorWhite"
+										variant="h4"
+										fontWeight="600"
+									>
 										Contact{' '}
-										<span style={{ fontWeight: '200' }}>Information</span>
+										<span style={{ fontWeight: '300' }}>Information</span>
 									</Typography>
 									<br />
-									<Typography varaint="body1" fontWeight="400">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										Vestibulum sed commodo felis.
+									<Typography
+										className="colorWhite"
+										varaint="body1"
+										fontWeight="400"
+									>
+										Lorem ipsum is simply dummy text of the printing and
+										typesetting industry.
 									</Typography>
 									<br />
-									<hr />
+									<hr style={{ opacity: '0.3' }} />
 									<br />
-									<Typography variant="body1" fontWeight="300">
+									<div style={{ display: 'flex' }}>
 										<LocationOnIcon
-											style={{ color: 'red', position: 'relative', top: '5px' }}
+											style={{
+												color: 'red',
+												marginRight: '10px',
+											}}
 										/>
-										Chortoq shahar
-									</Typography>
-									<Typography variant="body1" fontWeight="300">
+
+										<Typography
+											className="colorWhite"
+											variant="body1"
+											fontWeight="300"
+										>
+											Chortoq shahar
+										</Typography>
+									</div>
+									<Typography
+										sx={{ pl: '35px' }}
+										className="colorWhite"
+										variant="body1"
+										fontWeight="300"
+									>
 										"Istiqlol xiyoboni" ko'chasi 12-uy <br />
 										Mo'njal:"Afsona" bolalar bog'i yonida.
 									</Typography>
 									&nbsp;
-									<Typography varaint="body1">
+									<div style={{ display: 'flex', alignItems: 'center' }}>
 										<PhoneIcon
 											style={{
 												color: 'green',
-												position: 'relative',
-												top: '5px',
+												marginRight: '10px',
 											}}
 										/>
-										+998 99 322 01 13
-									</Typography>
-									&nbsp;
-									<Typography varaint="body1">
+										<Typography className="colorWhite" varaint="body1">
+											+998 99 322 01 13
+										</Typography>
+									</div>
+									<br />
+									<div style={{ display: 'flex', alignItems: 'center' }}>
 										<MailIcon
 											style={{
 												color: 'gray',
-												position: 'relative',
-												top: '5px',
+												marginRight: '10px',
 											}}
 										/>
-										info@example.com
-									</Typography>
+										<Typography className="colorWhite" varaint="body1">
+											info@example.com
+										</Typography>
+									</div>
+									<br />
+									<hr style={{ opacity: '0.3' }} />
 									&nbsp;
-									<hr />
-									&nbsp;
-									<Typography varaint="h5" fontWeight="600">
+									<Typography
+										className="colorWhite"
+										variant="h6"
+										fontWeight="600"
+									>
 										Follow Us
-										<br />
-										<InstagramIcon
-											style={{
-												cursor: 'pointer',
-												color: 'rgb(255, 2, 162)',
-												margin: '10px 10px 10px 0',
-											}}
-										/>
-										<TelegramIcon
-											style={{
-												cursor: 'pointer',
-												color: 'blue',
-												margin: '10px 10px 10px 0',
-											}}
-										/>
-										<FacebookIcon
-											style={{
-												cursor: 'pointer',
-												color: 'blue',
-												margin: '10px 10px 10px 0',
-											}}
-										/>
 									</Typography>
+									<br />
+									<InstagramIcon
+										style={{
+											padding: '',
+											cursor: 'pointer',
+											color: 'white',
+										}}
+									/>
+									<TelegramIcon
+										style={{
+											cursor: 'pointer',
+											color: 'white',
+										}}
+									/>
+									<FacebookIcon
+										style={{
+											cursor: 'pointer',
+											color: 'white',
+										}}
+									/>
 								</Container>
 							</div>
 						</Grid>
 						{/* <Grid item xs={12} md={6} >
-          <div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48126.28959040132!2d71.78943084917447!3d41.07132930752849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb53171d45fdc1%3A0x42561f3e8ba4c90e!2sChortoq%2C%20O%60zbekiston!5e0!3m2!1suz!2s!4v1637909995912!5m2!1suz!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
+          
           </Grid> */}
 					</Grid>
 				</Container>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Typography } from '@mui/material';
 import Carousel from './Section5_carousel';
+import Footer from '../Footer/LastPage';
 
 function Section3() {
 	return (
@@ -29,6 +30,10 @@ function Section3() {
 				</Typography>
 				<Carousel />
 			</Container>
+			<br />
+			<br />
+			<br />
+			<Footer />
 		</div>
 	);
 }

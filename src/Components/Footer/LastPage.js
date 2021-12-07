@@ -3,13 +3,20 @@ import { Container, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import './LastPage.scss';
 import Logo from '../images/logo-2.png';
+import Gallery from './Gallery';
 
 export default function LastPage() {
 	return (
 		<div className="LastPage">
 			<Container>
 				<Grid container rowSpacing={3} columnSpacing={4}>
-					<Grid item xs={12} sm={6} md={4}>
+					<Grid
+						item
+						xs={12}
+						sm={6}
+						md={4}
+						// sx={{ display: 'flex', justifyContent: 'center' }}
+					>
 						<div className="innerLastPAge">
 							<img src={Logo} />
 							<br />
@@ -22,7 +29,13 @@ export default function LastPage() {
 							</Typography>
 						</div>
 					</Grid>
-					<Grid item xs={6} sm={3} md={2}>
+					<Grid
+						item
+						xs={6}
+						sm={3}
+						md={2}
+						// sx={{ display: 'flex', justifyContent: 'center' }}
+					>
 						<table>
 							<thead>
 								<tr>
@@ -59,7 +72,13 @@ export default function LastPage() {
 							</tbody>
 						</table>
 					</Grid>
-					<Grid item xs={6} sm={3} md={2}>
+					<Grid
+						item
+						xs={6}
+						sm={3}
+						md={2}
+						// sx={{ display: 'flex', justifyContent: 'center' }}
+					>
 						<table>
 							<thead>
 								<tr>
@@ -95,10 +114,23 @@ export default function LastPage() {
 							</tbody>
 						</table>
 					</Grid>
+					<Grid item xs={12} md={4}>
+						<thead>
+							<tr>
+								<Typography sx={{ color: '#fff' }}>
+									{' '}
+									Our Gallery
+									<hr style={{ opacity: '.2' }} />
+								</Typography>
+							</tr>
+						</thead>
+						<br />
+						<Gallery />
+					</Grid>
 				</Grid>
 			</Container>
 			<br />
-			<br />
+			{/* <br /> */}
 			<hr style={{ opacity: '.2' }} />
 			<Typography style={{ paddingTop: '20px' }} align="center">
 				Developed by <strong>INLAB</strong>

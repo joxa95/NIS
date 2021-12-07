@@ -182,6 +182,7 @@ export default function PersistentDrawerLeft() {
 									sx={{ ...(open && { display: '' }) }}
 								>
 									<MenuIcon
+										className="MenuIcon"
 										sx={{
 											fontSize: '25px',
 											color: 'black',
@@ -189,6 +190,7 @@ export default function PersistentDrawerLeft() {
 										}}
 									/>
 									<CloseIcon
+										className="MenuIcon"
 										sx={{
 											display: 'none',
 											...(open && { display: '', color: 'black' }),

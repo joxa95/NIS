@@ -41,3 +41,14 @@
 		left: 40px;
 	}
 }
+
+@media only screen and (max-width: 400px) {
+	.navbar {
+		padding-top: 8px;
+		overflow: hidden;
+	}
+
+	.MenuIcon {
+		margin-left: -6px;
+	}
+}

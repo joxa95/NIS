@@ -8,6 +8,7 @@ import Layout from './Components/Layout/Layout';
 import About from './Components/About/About';
 import Questions from './Components/Question/Questions';
 import Courses from './Components/Courses/Courses';
+import Event from './Components/Events/Event';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -26,6 +27,7 @@ function App() {
 					<Route path="/login" element={<Login />} />
 					<Route path="/forgot" element={<Forgot />} />
 					<Route path="/signup" element={<SignUp />} />
+					<Route path="/event" element={<Event />} />
 				</Routes>
 			</Layout>
 		</div>

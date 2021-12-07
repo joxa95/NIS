@@ -75,14 +75,6 @@ export default function PersistentDrawerLeft() {
 
 	let menuRef = useRef();
 
-	// useEffect(() => {
-	// 	document.addEventListener('mousedown', event => {
-	// 		if (!menuRef.current.contains(event.target)) {
-	// 			setOpen(false);
-	// 		}
-	// 	});
-	// });
-
 	const handleDrawerOpen = () => {
 		setOpen(true);
 	};
@@ -181,14 +173,18 @@ export default function PersistentDrawerLeft() {
 									sx={{ ...(open && { display: '' }) }}
 								>
 									<MenuIcon
+										className="MenuIcon"
 										sx={{
+											marginRight: '15px',
 											fontSize: '25px',
 											color: 'white',
 											...(open && { display: 'none' }),
 										}}
 									/>
 									<CloseIcon
+										className="MenuIcon"
 										sx={{
+											marginRight: '15px',
 											display: 'none',
 											...(open && { display: '', color: 'white' }),
 										}}

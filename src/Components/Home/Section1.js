@@ -10,35 +10,13 @@ function HomePage() {
 			<div className="background">
 				<TopBar />
 				<Navbar />
-				<Typography
-					className="content_text_1"
-					variant="h6"
-					// sx={{
-					// 	textAlign: 'center',
-					// 	color: 'white',
-					// 	marginTop: '50px',
-					// 	marginBottom: '15px',
-					// 	fontSize: '15px',
-					// }}
-				>
+				<Typography className="content_text_1" variant="h6">
 					BETTER EDUCATION FOR A BETTER
 				</Typography>
-				<Typography
-					className="content_text_2"
-					variant="h3"
-					// sx={{
-					// 	textAlign: 'center',
-					// 	color: 'white',
-					// 	fontWeight: '900',
-					// 	marginBottom: '15px',
-					// }}
-				>
+				<Typography className="content_text_2" variant="h3">
 					<strong>WELLCOME TO UNIVERSITY</strong>
 				</Typography>
-				<Typography
-					className="content_text_3"
-					// sx={{ textAlign: 'center', color: 'white' }}
-				>
+				<Typography className="content_text_3">
 					Lorem Ipsum is simply dummy text of the printing and typesetting
 					industry. Lorem Ipsum has <br /> been the industry's standard dummy
 					text ever since the 1500s,

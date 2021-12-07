@@ -13,6 +13,7 @@ import Top_bar from '../Navbar/top_bar_white';
 import Navbar from '../Navbar/Navbar_white';
 import Footer from '../Footer/LastPage';
 import '../SCSS/Questions.scss';
+import RightIcon from '@mui/icons-material/ChevronRight';
 
 export default function Question() {
 	const Typ1 = 'Our Philosophy';
@@ -51,6 +52,21 @@ export default function Question() {
 							Frequently Asked Questions
 						</Typography>
 					</div>
+				</div>
+				<div
+					style={{
+						borderBottom: '1px solid rgba(109, 108, 134, 0.168)',
+						marginBottom: '50px',
+					}}
+				>
+					<Container sx={{ p: '15px ' }}>
+						<Typography
+							// variant="body2"
+							sx={{ display: 'flex', alignItems: 'center' }}
+						>
+							Home <RightIcon sx={{ fontSize: '18px' }} /> Questions
+						</Typography>
+					</Container>
 				</div>
 				<Container sx={{ pt: 3 }}>
 					<Grid container columnSpacing={4}>

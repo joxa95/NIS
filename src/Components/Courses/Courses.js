@@ -19,6 +19,7 @@ import pic8 from '../images/event/pic4.jpg';
 import Top_bar from '../Navbar/top_bar_white';
 import Navbar from '../Navbar/Navbar_white';
 import Footer from '../Footer/LastPage';
+import RightIcon from '@mui/icons-material/ChevronRight';
 
 export default function Courses() {
 	return (
@@ -32,9 +33,23 @@ export default function Courses() {
 					</Typography>
 				</div>
 			</div>
-
+			<div
+				style={{
+					borderBottom: '1px solid rgba(109, 108, 134, 0.168)',
+					marginBottom: '50px',
+				}}
+			>
+				<Container sx={{ p: '15px ' }}>
+					<Typography
+						// variant="body2"
+						sx={{ display: 'flex', alignItems: 'center' }}
+					>
+						Home <RightIcon sx={{ fontSize: '18px' }} /> Our Courses
+					</Typography>
+				</Container>
+			</div>
 			<Container sx={{ mb: 10 }}>
-				<Grid container columnSpacing={3} rowSpacing={3}>
+				<Grid container columnSpacing={3} rowSpacing={4}>
 					<Grid item xs={12} md={3}>
 						<TextField
 							variant="standard"
