@@ -56,7 +56,6 @@ export default function Question() {
 				<div
 					style={{
 						borderBottom: '1px solid rgba(109, 108, 134, 0.168)',
-						marginBottom: '50px',
 					}}
 				>
 					<Container sx={{ p: '15px ' }}>
@@ -68,24 +67,31 @@ export default function Question() {
 						</Typography>
 					</Container>
 				</div>
-				<Container sx={{ pt: 3 }}>
-					<Grid container columnSpacing={4}>
-						<Grid item xs={12} md={3}>
-							<QuestionCard Icons={icon1} Typo={Typ1} />
+				<div
+					style={{ width: '100%', backgroundColor: 'rgba(200,200,300, 0.2)' }}
+				>
+					<Container sx={{ p: '60px 20px' }}>
+						<Grid container columnSpacing={4}>
+							<Grid item xs={12} md={3}>
+								<QuestionCard Icons={icon1} Typo={Typ1} />
+							</Grid>
+							<Grid item xs={12} md={3}>
+								<QuestionCard Icons={icon2} Typo={Typ2} />
+							</Grid>
+							<Grid item xs={12} md={3}>
+								<QuestionCard Icons={icon3} Typo={Typ3} />
+							</Grid>
+							<Grid item xs={12} md={3}>
+								<QuestionCard Icons={icon4} Typo={Typ1} />
+							</Grid>
 						</Grid>
-						<Grid item xs={12} md={3}>
-							<QuestionCard Icons={icon2} Typo={Typ2} />
-						</Grid>
-						<Grid item xs={12} md={3}>
-							<QuestionCard Icons={icon3} Typo={Typ3} />
-						</Grid>
-						<Grid item xs={12} md={3}>
-							<QuestionCard Icons={icon4} Typo={Typ1} />
-						</Grid>
-					</Grid>
-				</Container>
+					</Container>
+				</div>
 			</div>
 			<Container>
+				<br />
+				<br />
+				<br />
 				<br />
 				<Grid container columnSpacing={3} rowSpacing={3}>
 					<Grid item xs={12} md={8}>
@@ -133,20 +139,93 @@ export default function Question() {
 				</Grid>
 			</Container>
 			<br />
-			<div style={{ padding: '30px 0', background: 'rgb(200,200,300)' }}>
+			<div
+				style={{
+					padding: '30px 0',
+					background: 'rgb(200,200,300, 0.2)',
+				}}
+			>
 				<Container>
-					<Grid container rowSpacing={3} columnSpacing={3}>
+					<Grid container columnSpacing={4} rowSpacing={3}>
 						<Grid item xs={12} md={3}>
-							<Count pvalue={pvalue1} count={count1} />
+							<Typography
+								style={{
+									padding: '10px',
+									margin: '20px',
+									color: 'rgb(120, 0, 181)',
+								}}
+								variant="h2"
+								fontWeight="800"
+								align="center"
+							>
+								3000+
+								<br />
+								<Typography
+									style={{ color: '#545454' }}
+									variant="body1"
+									fontWeight="500"
+								>
+									Completed Projects
+								</Typography>
+							</Typography>
 						</Grid>
 						<Grid item xs={12} md={3}>
-							<Count pvalue={pvalue2} count={count2} />
+							<Typography
+								style={{ padding: '10px', margin: '20px' }}
+								variant="h2"
+								fontWeight="800"
+								align="center"
+							>
+								2500+
+								<br />
+								<Typography
+									style={{ color: '#545454' }}
+									variant="body1"
+									fontWeight="500"
+								>
+									Happy Clients
+								</Typography>
+							</Typography>
 						</Grid>
 						<Grid item xs={12} md={3}>
-							<Count pvalue={pvalue3} count={count3} />
+							<Typography
+								style={{
+									padding: '10px',
+									margin: '20px',
+									color: 'rgb(120, 0, 181)',
+								}}
+								variant="h2"
+								fontWeight="800"
+								align="center"
+							>
+								1500+
+								<br />
+								<Typography
+									style={{ color: '#545454' }}
+									variant="body1"
+									fontWeight="500"
+								>
+									Questions Answered
+								</Typography>
+							</Typography>
 						</Grid>
 						<Grid item xs={12} md={3}>
-							<Count pvalue={pvalue4} count={count4} />
+							<Typography
+								style={{ padding: '10px', margin: '20px' }}
+								variant="h2"
+								fontWeight="800"
+								align="center"
+							>
+								1000+
+								<br />
+								<Typography
+									style={{ color: '#545454' }}
+									variant="body1"
+									fontWeight="500"
+								>
+									Ordered coffee's
+								</Typography>
+							</Typography>
 						</Grid>
 					</Grid>
 				</Container>

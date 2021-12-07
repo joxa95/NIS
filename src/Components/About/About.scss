@@ -45,14 +45,16 @@
 	white-space: normal;
 }
 .story {
-	padding: 25px;
-	background: #e0e0e0e0;
+	padding: 25px 25px 25px 25px;
+	background: #006eff0a;
 }
+
 .story button {
 	font-weight: 600;
 	background-color: gold;
 	color: #111;
 }
+
 .story button:hover {
 	background-color: rgb(120, 0, 181);
 	color: #fff;
@@ -99,4 +101,23 @@
 	.fixedBack {
 		font-size: 20px;
 	}
+}
+
+// * Video
+
+.player-wrapper {
+	position: relative;
+	padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+//* Contacts
+.ContactIcon:hover {
+	background-color: rgb(255, 166, 0);
+	color: black !important;
 }

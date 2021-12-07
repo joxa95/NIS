@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import { Link } from 'react-router-dom';
-
+import Logo from '../images/favicon.png';
 import Grid from '@mui/material/Grid';
 
 export default function SignUP() {
@@ -18,7 +18,15 @@ export default function SignUP() {
 			<Grid container>
 				<Grid item xs={12} md={5}>
 					<div className="SignUpNam">
-						<Typography className="school" variant="h5">
+						<Typography className="school" variant="h6">
+							<img
+								style={{
+									height: '80px',
+									marginRight: '10px',
+									backgroundColor: ' transparent',
+								}}
+								src={Logo}
+							/>
 							Namangan <br /> International <br /> School
 						</Typography>
 					</div>

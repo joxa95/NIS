@@ -26,6 +26,10 @@ import Top_white from '../Navbar/top_bar_white';
 import Footer from '../Footer/LastPage';
 import RightIcon from '@mui/icons-material/ChevronRight';
 import Carousel from '../Home/Section4_carousel';
+// import ReactPlayer from 'react-player/youtube';
+import ReactPlayer from 'react-player';
+import Video from './Video.mp4';
+import Poster from '../images/about/pic1.jpg';
 
 export default function About() {
 	return (
@@ -36,7 +40,7 @@ export default function About() {
 				<div className="CoursesPage">
 					<div className="backTypo">
 						<Typography align="center" variant="h4" fontWeight="600">
-							About Us1
+							About Us
 						</Typography>
 					</div>
 				</div>
@@ -105,9 +109,11 @@ export default function About() {
 								</Typography>
 							</div>
 						</Grid>
-						<Grid item xs={12} md={6}>
+						<Grid item xs={12} md={5}>
+							<br />
+							<br />
 							<div className="story">
-								<Typography variant="h5" fontWeight="600">
+								<Typography variant="h4" fontWeight="600">
 									Our Story
 									<Typography className="space" variant="body1" align="left">
 										<br />
@@ -117,9 +123,7 @@ export default function About() {
 										ad minim veniam, quis nostrud exercitation ullamco laboris
 										nisi ut aliquip ex ea commodo consequat. Duis aute irure
 										dolor in reprehenderit in voluptate velit esse cillum dolore
-										eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-										non proident, sunt in culpa qui officia deserunt mollit anim
-										id est laborum.
+										eu fugiat nulla pariatur.
 									</Typography>
 									<br />
 									<Button type="submit" variant="contained">
@@ -128,7 +132,30 @@ export default function About() {
 								</Typography>
 							</div>
 						</Grid>
-						<Grid item md={6}></Grid>
+						<Grid item xs={12} md={7}>
+							<br />
+							<br />
+							<br />
+							<div className="player-wrapper">
+								<ReactPlayer
+									className="react-player"
+									url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+									width="100%"
+									height="100%"
+									controls={true}
+									light={Poster}
+								/>
+							</div>
+							{/* <VideoPlayer
+								className="Video"
+								src={Video}
+								poster={Poster}
+								width="300%"
+								height="100%"
+							/> */}
+							<br />
+							<br />
+						</Grid>{' '}
 						<Grid item xs={12} md={3}>
 							<Typography
 								style={{
@@ -137,7 +164,7 @@ export default function About() {
 									color: 'rgb(120, 0, 181)',
 								}}
 								variant="h2"
-								fontWeight="600"
+								fontWeight="800"
 								align="center"
 							>
 								3000+
@@ -155,7 +182,7 @@ export default function About() {
 							<Typography
 								style={{ padding: '10px', margin: '20px' }}
 								variant="h2"
-								fontWeight="600"
+								fontWeight="800"
 								align="center"
 							>
 								2500+
@@ -177,7 +204,7 @@ export default function About() {
 									color: 'rgb(120, 0, 181)',
 								}}
 								variant="h2"
-								fontWeight="600"
+								fontWeight="800"
 								align="center"
 							>
 								1500+
@@ -195,7 +222,7 @@ export default function About() {
 							<Typography
 								style={{ padding: '10px', margin: '20px' }}
 								variant="h2"
-								fontWeight="600"
+								fontWeight="800"
 								align="center"
 							>
 								1000+
@@ -211,6 +238,8 @@ export default function About() {
 						</Grid>
 					</Grid>
 				</Container>
+				<br />
+				<br />
 				<div className="fixedBack">
 					<div className="backTypoFixed">
 						<Container>
@@ -360,20 +389,36 @@ export default function About() {
 									</Typography>
 									<br />
 									<InstagramIcon
+										className="ContactIcon"
 										style={{
-											padding: '',
+											padding: '10px',
+											borderRadius: '50%',
+											border: '1px solid white',
+											fontSize: '40px',
 											cursor: 'pointer',
 											color: 'white',
 										}}
 									/>
+									&nbsp;
 									<TelegramIcon
+										className="ContactIcon"
 										style={{
+											padding: '10px',
+											borderRadius: '50%',
+											border: '1px solid white',
+											fontSize: '40px',
 											cursor: 'pointer',
 											color: 'white',
 										}}
 									/>
+									&nbsp;
 									<FacebookIcon
+										className="ContactIcon"
 										style={{
+											padding: '10px',
+											borderRadius: '50%',
+											border: '1px solid white',
+											fontSize: '40px',
 											cursor: 'pointer',
 											color: 'white',
 										}}
@@ -381,13 +426,24 @@ export default function About() {
 								</Container>
 							</div>
 						</Grid>
-						{/* <Grid item xs={12} md={6} >
-          
-          </Grid> */}
+						<Grid item xs={12} md={6.5}>
+							<iframe
+								style={{ border: 'none' }}
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.3586927348742!2d71.67288005651785!3d40.99552167390775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb4c1b2e60eea5%3A0x36ef7252c4c12106!2z0J3QsNC80LDQvdCz0LDQvSwg0KPQt9Cx0LXQutC40YHRgtCw0L0!5e0!3m2!1sru!2s!4v1638863595687!5m2!1sru!2s"
+								width="100%"
+								height="100%"
+
+								// style="border:0;"
+								// allowfullscreen=""
+								// loading="lazy"
+							></iframe>
+						</Grid>
 					</Grid>
 				</Container>
 				<br />
 			</div>
+			<br />
+			<br />
 			<Footer />
 		</div>
 	);

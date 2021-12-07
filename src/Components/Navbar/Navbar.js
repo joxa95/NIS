@@ -230,7 +230,7 @@ export default function PersistentDrawerLeft() {
 					}}
 				>
 					<Container>
-						<Link className="link2" to="/home">
+						<Link className="link2" to="/">
 							<div className="link" style={{ borderTop: '1px dashed #e0e0e0' }}>
 								Home
 							</div>

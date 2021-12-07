@@ -1,5 +1,5 @@
 import React from 'react';
-import '../SCSS/Count.scss';
+import '../SCSS/Section4.scss';
 import Grid from '@mui/material/Grid';
 import { Container, Typography } from '@mui/material';
 import Carousel from './Section4_carousel';
@@ -9,8 +9,9 @@ function Upcoming_ivents() {
 	return (
 		<div>
 			<div
+				className="Section4"
 				style={{
-					marginTop: '300px',
+					marginTop: '200px',
 					width: '100%',
 					height: '600px',
 					backgroundImage: 'linear-gradient(to right, #380C6A, #380C6A',

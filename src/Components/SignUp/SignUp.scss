@@ -29,12 +29,19 @@
 	align-items: center;
 	justify-content: center;
 	background-color: rgb(120, 0, 181);
+	background: url(../images/loginBack.jpg);
+	background-size: cover;
+	background-position: center;
 	opacity: 0.7;
 }
+
+.BackColor {
+	background-color: white;
+}
+
 .SignUpNam {
 	color: #fff;
 	height: 30vh;
-	// background: url(../images/banner/banner2.jpg);
 	background-size: cover;
 }
 .forgot {
