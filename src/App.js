@@ -9,6 +9,7 @@ import About from './Components/About/About';
 import Questions from './Components/Question/Questions';
 import Courses from './Components/Courses/Courses';
 import Event from './Components/Events/Event';
+import Galary from './Components/Gallery/Galary';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -28,6 +29,7 @@ function App() {
 					<Route path="/forgot" element={<Forgot />} />
 					<Route path="/signup" element={<SignUp />} />
 					<Route path="/event" element={<Event />} />
+					<Route path="/gallery" element={<Galary />} />
 				</Routes>
 			</Layout>
 		</div>

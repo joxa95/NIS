@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Container, Typography } from '@mui/material';
 import Footer from '../Footer/LastPage';
 import Event from './EventCard';
-import '../About/About.scss';
+import '../SCSS/About.scss';
 import Navbar from '../Navbar/Navbar_white';
 import Top_bar from '../Navbar/top_bar_white';
 import RightIcon from '@mui/icons-material/ChevronRight';

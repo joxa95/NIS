@@ -1,6 +1,6 @@
 import Raect from 'react';
 
-import '../About/About.scss';
+import '../SCSS/About.scss';
 import { Typography, Container } from '@mui/material';
 
 export default function QuestionCard(props) {

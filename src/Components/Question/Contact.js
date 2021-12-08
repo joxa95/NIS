@@ -1,5 +1,5 @@
 import React from 'react';
-import '../About/About.scss';
+import '../SCSS/About.scss';
 import img1 from '../images/profile/pic1.jpg';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';

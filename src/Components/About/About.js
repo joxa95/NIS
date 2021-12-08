@@ -13,7 +13,7 @@ import icon1 from '../images/icon/icon1.png';
 import icon2 from '../images/icon/icon2.png';
 import icon3 from '../images/icon/icon3.png';
 import icon4 from '../images/icon/icon4.png';
-import './About.scss';
+import '../SCSS/About.scss';
 import img1 from '../images/profile/pic1.jpg';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
